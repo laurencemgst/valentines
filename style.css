@@ -106,6 +106,7 @@ button:hover {
   align-items: center;
   padding: 20px;
   box-sizing: border-box;
+  flex-direction: column;
 }
 
 .love-message:not(.hidden) {
@@ -116,6 +117,14 @@ button:hover {
 .love-message h1 {
   font-size: 60px;
   color: white;
+  text-align: center;
+  animation: popUp 1s ease forwards;
+  word-break: break-word;
+}
+
+.love-message h3 {
+  font-size: 30px;
+  color: linear-gradient(135deg, #ea66aa 0%, #eebfea 100%);
   text-align: center;
   animation: popUp 1s ease forwards;
   word-break: break-word;
