@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Valentine's Day Invitation</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div id="floating-bg"></div>
+    <!-- Slideshow -->
+    <div id="slideshow" class="slideshow-container">
+      <div class="slide fade"><img src="1.PNG" /></div>
+      <div class="slide fade"><img src="2.PNG" /></div>
+      <div class="slide fade"><img src="3.png" /></div>
+    </div>
+
+    <!-- Invitation Card (Hidden at first) -->
+    <div id="invitationCard" class="invitation hidden">
+      <div class="heart">💕</div>
+      <h1>Will You Be My Valentine?</h1>
+      <p class="message">
+        I would be honored if you would spend Valentine's Day with me. Let's
+        create a beautiful memory together.
+      </p>
+      <div class="details">
+        <p><strong>Date:</strong> February 14th</p>
+        <p><strong>Time:</strong> To be determined</p>
+        <p><strong>With:</strong> You 💜</p>
+      </div>
+      <button id="yesBtn">Say Yes!</button>
+    </div>
+
+    <!-- Animated I Love You Message (hidden by default) -->
+    <div id="loveMessage" class="love-message hidden">
+      <h1>ILOVEYOUSOMUCH, BABI! 💖</h1>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

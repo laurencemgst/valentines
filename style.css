@@ -1,0 +1,184 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Georgia", serif;
+  background: linear-gradient(135deg, #ea66aa 0%, #eebfea 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  flex-direction: column;
+}
+
+/* Hide class */
+.hidden {
+  display: none;
+}
+
+/* Slideshow */
+.slideshow-container {
+  width: 90%;
+  max-width: 500px;
+  margin-bottom: 40px;
+}
+
+.slide {
+  display: none;
+}
+
+.slide img {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.fade {
+  animation: fadeEffect 1.2s;
+}
+
+@keyframes fadeEffect {
+  from {
+    opacity: 0.3;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Invitation Card */
+.invitation {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  padding: 60px 40px;
+  max-width: 500px;
+  text-align: center;
+  border: 3px solid #ff69b4;
+}
+
+.heart {
+  font-size: 60px;
+  margin-bottom: 20px;
+}
+
+.message {
+  font-size: 18px;
+  margin: 20px 0 30px;
+}
+
+.details {
+  background: #ffe4f0;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+button {
+  background: #ff1493;
+  color: white;
+  border: none;
+  padding: 15px 40px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background: #ff69b4;
+}
+
+/* Love Message Style */
+.love-message {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw; /* Full width */
+  height: 100vh; /* Full height */
+  background: radial-gradient(circle, #ff69b4, #ff1493);
+  z-index: 9999;
+  display: none; /* Hide by default */
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.love-message:not(.hidden) {
+  display: flex;
+  animation: fadeIn 1s ease forwards;
+}
+
+.love-message h1 {
+  font-size: 60px;
+  color: white;
+  text-align: center;
+  animation: popUp 1s ease forwards;
+  word-break: break-word;
+}
+
+@media (max-width: 600px) {
+  .love-message h1 {
+    font-size: 32px;
+  }
+  .love-message {
+    padding: 10px;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes popUp {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+#floating-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.floating {
+  position: absolute;
+  font-size: 32px;
+  opacity: 0.8;
+  animation: floatUp 6s linear forwards;
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(100vh) scale(1) rotate(0deg);
+    opacity: 0.8;
+  }
+  80% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(-50px) scale(1.2) rotate(360deg);
+    opacity: 0;
+  }
+}
